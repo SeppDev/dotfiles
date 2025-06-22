@@ -27,6 +27,11 @@
     };
   };
 
+  nixpkgs.config = {
+    acceptLicense = true;
+    allowUnfree = true;
+  };
+
   # programs.firefox.enable = true;
   hardware.enableAllFirmware = true;
   services.power-profiles-daemon.enable = false;
