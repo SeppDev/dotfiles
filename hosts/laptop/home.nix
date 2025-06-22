@@ -8,6 +8,7 @@ in
   imports = [
     (Module "git")
     (Module "prefer-dark")
+    (Module "common")
 
     (Module "shells/bash")
     (Module "starship")
@@ -18,37 +19,6 @@ in
     (Module "editors/zed-editor")
     (Module "editors/helix")
   ];
-
-  home = {
-    username = "sepp";
-    homeDirectory = "/home/sepp";
-  };
-
-  # home.file.".config/hypr" = {
-  #   source = ../../config/hypr;
-  #   recursive = true;
-  # };
-
-  xdg.configFile."hypr".source = ../../config/hypr;
-
-  home.sessionVariables = {
-    GTK_THEME = "Adwaita-dark";
-    QT_QPA_PLATFORMTHEME = "qt5ct";
-    XDG_CURRENT_DESKTOP = "Hyprland";
-    XDG_SESSION_TYPE = "wayland";
-    XCURSOR_THEME = "Adwaita";
-    GDK_BACKEND = "wayland,x11";
-  };
-
-  # link the configuration file in current directory to the specified location in home directory
-  # home.file.".config/i3/wallpaper.jpg".source = ./wallpaper.jpg;
-
-  # link all files in `./scripts` to `~/.config/i3/scripts`
-  # home.file.".config/i3/scripts" = {
-  #   source = ./scripts;
-  #   recursive = true;   # link recursively
-  #   executable = true;  # make all files executable
-  # };
 
   # Packages that should be installed to the user profile.
   home.packages = with pkgs; [
