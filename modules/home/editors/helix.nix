@@ -5,13 +5,12 @@
 
   programs.helix = {
     enable = true;
-    languages = [
-      {
-        name = "nix";
+    languages = {
+      nix = {
         auto-format = true;
         formatter.command = "nixfmt";
-      }
-    ];
+      };
+    };
     settings = {
       theme = "modus_vivendi";
       editor = {

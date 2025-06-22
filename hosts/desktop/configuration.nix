@@ -24,10 +24,12 @@
     ];
   };
 
-  nixpkgs.config.acceptLicense = true;
+  nixpkgs.config = {
+    acceptLicense = true;
+    allowUnfree = true;
+  };
 
   home-manager = {
-    # specialArgs = { inherit inputs; };
     useGlobalPkgs = true;
     useUserPackages = true;
     users = {
@@ -86,7 +88,6 @@
       };
     };
 
-    opengl.enable = true;
     graphics = {
       enable = true;
     };
