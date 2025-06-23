@@ -20,10 +20,11 @@ in
     (Module "editors/helix")
   ];
 
-  # Packages that should be installed to the user profile.
   home.packages = with pkgs; [
     xdg-desktop-portal-hyprland
     wl-clipboard
+    brightnessctl
+    cmake
 
     zoxide
     rpi-imager

@@ -29,9 +29,9 @@ in
     vlc
     clangStdenv
     waypaper
-    hyprpaper
     fastfetch
     home-manager
+    cmake
     # fastfetch
     # astal.io
     # astal.gjs
@@ -77,6 +77,7 @@ in
     obs-studio-plugins.obs-websocket
     obs-cmd
 
+    speech-denoiser
     libva
     libvdpau
     vdpauinfo

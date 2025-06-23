@@ -4,11 +4,14 @@
   ...
 }:
 
+let
+  systemDir = ../../modules/system;
+  Module = name: systemDir + "/${name}.nix";
+in
 {
   imports = [
     /etc/nixos/hardware-configuration.nix
-    ../../modules/system/hyprland.nix
-    # ../../modules/services/flatpak.nix
+    (Module "hyprland")
   ];
 
   environment.sessionVariables = {
@@ -23,6 +26,8 @@
       "wheel"
     ];
   };
+
+  environment.variables.PATH = [ "$HOME/.cargo/bin" ];
 
   nixpkgs.config = {
     acceptLicense = true;

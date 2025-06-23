@@ -4,15 +4,6 @@
   home = {
     username = "sepp";
     homeDirectory = "/home/sepp";
-    pointerCursor = {
-      name = "rose-pine";
-      package = pkgs.rose-pine-hyprcursor;
-      size = 32;
-      gtk.enable = true;
-    };
-    sessionPath = [
-      "$HOME/.cargo/bin"
-    ];
     sessionVariables = {
       EDITOR = "zeditor";
       XCURSOR_SIZE = "32";
