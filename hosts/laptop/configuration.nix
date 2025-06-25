@@ -3,11 +3,15 @@
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
 { pkgs, ... }:
-
+let
+  systemDir = ../../modules/system;
+  Module = name: systemDir + "/${name}.nix";
+in
 {
   imports = [
     /etc/nixos/hardware-configuration.nix
-    ../../modules/system/hyprland.nix
+    (Module "hyprland")
+    (Module "polkit")
   ];
 
   environment.variables = {
@@ -21,6 +25,7 @@
       efi.canTouchEfiVariables = true;
     };
   };
+  
   boot.initrd.luks.devices."luks-09569b80-0fb2-4ef9-99c7-52e5c1360f8e".device =
     "/dev/disk/by-uuid/09569b80-0fb2-4ef9-99c7-52e5c1360f8e";
 
@@ -30,6 +35,8 @@
     acceptLicense = true;
     allowUnfree = true;
   };
+
+  qt.enable = true;
 
   # programs.firefox.enable = true;
   hardware.enableAllFirmware = true;
@@ -132,6 +139,7 @@
   };
 
   environment.systemPackages = with pkgs; [
+    wl-clipboard
     tlp
     brave
   ];

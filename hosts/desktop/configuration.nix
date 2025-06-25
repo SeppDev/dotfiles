@@ -11,7 +11,9 @@ in
 {
   imports = [
     /etc/nixos/hardware-configuration.nix
-    (Module "hyprland")
+    (Module "desktop/hyprland")
+    (Module "envpath")
+    (Module "polkit")
   ];
 
   environment.sessionVariables = {
@@ -26,8 +28,6 @@ in
       "wheel"
     ];
   };
-
-  environment.variables.PATH = [ "$HOME/.cargo/bin" ];
 
   nixpkgs.config = {
     acceptLicense = true;
@@ -175,7 +175,6 @@ in
   };
 
   security = {
-    polkit.enable = true;
     rtkit.enable = true;
     sudo.enable = false;
     sudo-rs.enable = true;
@@ -206,26 +205,11 @@ in
     speech-denoiser
     noisetorch
     easyeffects
+    wl-clipboard
     # protonup
     lutris
     bottles
   ];
-
-  systemd = {
-    user.services.polkit-gnome-authentication-agent-1 = {
-      description = "polkit-gnome-authentication-agent-1";
-      wantedBy = [ "graphical-session.target" ];
-      wants = [ "graphical-session.target" ];
-      after = [ "graphical-session.target" ];
-      serviceConfig = {
-        Type = "simple";
-        ExecStart = "${pkgs.polkit_gnome}/libexec/polkit-gnome-authentication-agent-1";
-        Restart = "on-failure";
-        RestartSec = 1;
-        TimeoutStopSec = 10;
-      };
-    };
-  };
 
   xdg.portal = {
     enable = true;

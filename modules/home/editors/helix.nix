@@ -10,6 +10,10 @@
         auto-format = true;
         formatter.command = "nixfmt";
       };
+      qml = {
+        language-servers = [ "qmlls" ];
+        file-types = [ "qml" ];
+      };
     };
     settings = {
       theme = "modus_vivendi";

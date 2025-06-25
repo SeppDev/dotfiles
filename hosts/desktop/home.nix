@@ -21,6 +21,7 @@ in
   ];
 
   home.packages = with pkgs; [
+    quickshell
     rustup
     zoxide
     rpi-imager
@@ -52,7 +53,6 @@ in
     gtk4
     nodejs
     typescript
-    polkit_gnome
     papirus-icon-theme
 
     # nixd
@@ -81,7 +81,6 @@ in
     libva
     libvdpau
     vdpauinfo
-    home-manager
 
     ffmpeg-full
     x265

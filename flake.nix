@@ -25,6 +25,7 @@
         desktop = nixpkgs.lib.nixosSystem {
           modules = [
             inputs.home-manager.nixosModules.default
+            
             ./hosts/desktop/configuration.nix
           ];
         };

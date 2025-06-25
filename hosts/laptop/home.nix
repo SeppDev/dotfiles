@@ -21,10 +21,22 @@ in
   ];
 
   home.packages = with pkgs; [
+    quickshell
+    vscodium
+
+    kdePackages.qtlanguageserver
+    qt6.full
+    qt6.qtdeclarative
+    qt6.qtbase
+    qt6.qtlanguageserver
+    qtcreator
+    cmake
+    ninja
+    just
+
     xdg-desktop-portal-hyprland
     wl-clipboard
     brightnessctl
-    cmake
 
     zoxide
     rpi-imager
