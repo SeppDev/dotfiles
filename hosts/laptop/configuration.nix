@@ -10,7 +10,8 @@ in
 {
   imports = [
     /etc/nixos/hardware-configuration.nix
-    (Module "hyprland")
+    (Module "desktop/hyprland")
+    (Module "envpath")
     (Module "polkit")
   ];
 
