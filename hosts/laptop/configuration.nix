@@ -10,9 +10,13 @@ in
 {
   imports = [
     /etc/nixos/hardware-configuration.nix
-    (Module "hyprland")
+    (Module "desktop/hyprland")
+    (Module "base")
     (Module "envpath")
     (Module "polkit")
+    (Module "bluetooth")
+    (Module "network")
+    (Module "locale")
   ];
 
   environment.sessionVariables.HOST = "laptop";
@@ -28,10 +32,7 @@ in
   boot.initrd.luks.devices."luks-09569b80-0fb2-4ef9-99c7-52e5c1360f8e".device =
     "/dev/disk/by-uuid/09569b80-0fb2-4ef9-99c7-52e5c1360f8e";
 
-  nixpkgs.config = {
-    acceptLicense = true;
-    allowUnfree = true;
-  };
+
 
   qt.enable = true;
 
@@ -49,20 +50,6 @@ in
   networking = {
     hostName = "laptop";
     networkmanager.enable = true;
-  };
-
-  time.timeZone = "Europe/Amsterdam";
-  i18n.extraLocaleSettings = {
-    defaultLocale = "en_US.UTF-8";
-    LC_ADDRESS = "nl_NL.UTF-8";
-    LC_IDENTIFICATION = "nl_NL.UTF-8";
-    LC_MEASUREMENT = "nl_NL.UTF-8";
-    LC_MONETARY = "nl_NL.UTF-8";
-    LC_NAME = "nl_NL.UTF-8";
-    LC_NUMERIC = "nl_NL.UTF-8";
-    LC_PAPER = "nl_NL.UTF-8";
-    LC_TELEPHONE = "nl_NL.UTF-8";
-    LC_TIME = "nl_NL.UTF-8";
   };
 
   # Enable the X11 windowing system.
@@ -117,22 +104,6 @@ in
     extraOptions = ''
       experimental-features = nix-command flakes
     '';
-  };
-
-  systemd = {
-    user.services.polkit-gnome-authentication-agent-1 = {
-      description = "polkit-gnome-authentication-agent-1";
-      wantedBy = [ "graphical-session.target" ];
-      wants = [ "graphical-session.target" ];
-      after = [ "graphical-session.target" ];
-      serviceConfig = {
-        Type = "simple";
-        ExecStart = "${pkgs.polkit_gnome}/libexec/polkit-gnome-authentication-agent-1";
-        Restart = "on-failure";
-        RestartSec = 1;
-        TimeoutStopSec = 10;
-      };
-    };
   };
 
   environment.systemPackages = with pkgs; [

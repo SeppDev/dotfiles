@@ -1,7 +1,7 @@
 { pkgs, ... }:
 
 {
-  home.packages = with pkgs; [ PROGRAM ];
+  environment.packages = with pkgs; [ PROGRAM ];
 
   programs.PROGRAM = {
 

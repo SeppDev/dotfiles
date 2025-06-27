@@ -1,6 +1,17 @@
 { pkgs, ... }:
 
 {
+  environment.systemPackages = with pkgs; [
+    helix
+    wget
+    wl-clipboard
+  ];
+
+  nixpkgs.config = {
+    acceptLicense = true;
+    allowUnfree = true;
+  };
+
   security = {
     rtkit.enable = true;
     sudo.enable = false;
@@ -18,5 +29,11 @@
     extraOptions = ''
       experimental-features = nix-command flakes
     '';
+  };
+
+  xdg.portal = {
+    enable = true;
+    wlr.enable = true;
+    extraPortals = [ pkgs.xdg-desktop-portal-hyprland ];
   };
 }

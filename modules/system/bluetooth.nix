@@ -1,9 +1,10 @@
 { pkgs, ... }:
 
 {
-  home.packages = with pkgs; [
+  environment.systemPackages = with pkgs; [
     blueman
     bluez
+    playerctl
   ];
 
   hardware.bluetooth = {
@@ -12,6 +13,7 @@
     settings = {
       General = {
         Enable = "Source,Sink,Media,Socket";
+        Experimental = true;
       };
     };
   };
