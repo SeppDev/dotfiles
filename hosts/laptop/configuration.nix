@@ -10,14 +10,12 @@ in
 {
   imports = [
     /etc/nixos/hardware-configuration.nix
-    (Module "desktop/hyprland")
+    (Module "hyprland")
     (Module "envpath")
     (Module "polkit")
   ];
 
-  environment.variables = {
-    HOST = "laptop";
-  };
+  environment.sessionVariables.HOST = "laptop";
 
   # Bootloader.
   boot = {
@@ -26,11 +24,9 @@ in
       efi.canTouchEfiVariables = true;
     };
   };
-  
+
   boot.initrd.luks.devices."luks-09569b80-0fb2-4ef9-99c7-52e5c1360f8e".device =
     "/dev/disk/by-uuid/09569b80-0fb2-4ef9-99c7-52e5c1360f8e";
-
-  environment.variables.PATH = [ "$HOME/.cargo/bin" ];
 
   nixpkgs.config = {
     acceptLicense = true;

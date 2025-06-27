@@ -1,9 +1,22 @@
-{ pkgs, ...}:
+{ pkgs, ... }:
 
 {
-  home.packages = with pkgs; [PROGRAM];
+  security = {
+    rtkit.enable = true;
+    sudo.enable = false;
+    sudo-rs.enable = true;
+    pam.services.hyprland.enableGnomeKeyring = true;
+  };
 
-  programs.PROGRAM = {
-    
+  nix = {
+    gc = {
+      automatic = true;
+      dates = "weekly";
+      options = "--delete-older-than 7d";
+    };
+    package = pkgs.nix;
+    extraOptions = ''
+      experimental-features = nix-command flakes
+    '';
   };
 }

@@ -14,11 +14,12 @@ in
     (Module "desktop/hyprland")
     (Module "envpath")
     (Module "polkit")
+    (Module "bluetooth")
+    (Module "common")
+    (Module "network")
   ];
 
-  environment.sessionVariables = {
-    HOST = "desktop";
-  };
+  environment.sessionVariables.HOST = "desktop";
 
   users.users.sepp = {
     isNormalUser = true;
@@ -69,29 +70,9 @@ in
     };
   };
 
-  networking = {
-    hostName = "desktop";
-    # nameservers = [ "194.242.2.9" ];
-    # resolvconf.enable = false;
-    networkmanager = {
-      enable = true;
-      # dns = "none";
-    };
-  };
-
   hardware = {
     xpadneo.enable = true;
     enableAllFirmware = true;
-
-    bluetooth = {
-      enable = true;
-      powerOnBoot = true;
-      settings = {
-        General = {
-          Enable = "Source,Sink,Media,Socket";
-        };
-      };
-    };
 
     graphics = {
       enable = true;
@@ -113,18 +94,6 @@ in
   ];
 
   services = {
-    resolved = {
-      enable = true;
-      dnsovertls = "true";
-      dnssec = "false";
-      llmnr = "true";
-      domains = [
-        "~"
-      ];
-      extraConfig = ''
-        DNS=194.242.2.6#family.dns.mullvad.net
-      '';
-    };
     xserver = {
       enable = true;
       dpi = 300;
@@ -174,29 +143,9 @@ in
     };
   };
 
-  security = {
-    rtkit.enable = true;
-    sudo.enable = false;
-    sudo-rs.enable = true;
-    pam.services.hyprland.enableGnomeKeyring = true;
-  };
-
-  nix = {
-    gc = {
-      automatic = true;
-      dates = "weekly";
-      options = "--delete-older-than 7d";
-    };
-    package = pkgs.nix;
-    extraOptions = ''
-      experimental-features = nix-command flakes
-    '';
-  };
-
   environment.systemPackages = with pkgs; [
     helix
     wget
-    polkit
     bun
     gcc
     clang
@@ -206,7 +155,6 @@ in
     noisetorch
     easyeffects
     wl-clipboard
-    # protonup
     lutris
     bottles
   ];
