@@ -2,8 +2,8 @@
 {
   imports = [
     ./bluetooth.nix
+    ./audio.nix
     ./network.nix
-    ./nvidia.nix
     ./xpadneo.nix
     ./common.nix
   ];

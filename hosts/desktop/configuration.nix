@@ -16,6 +16,7 @@ in
     (Default "hardware")
     (Default "security")
     (Default "desktop")
+    (Module "drivers/nvidia")
   ];
 
   environment.sessionVariables.HOST = "desktop";
@@ -52,24 +53,7 @@ in
 
   services = {
     libinput.enable = true;
-    displayManager = {
-      gdm.enable = true;
-    };
-    desktopManager = {
-      gnome.enable = true;
-      plasma6.enable = false;
-    };
-    pipewire = {
-      enable = true;
-      alsa.enable = true;
-      alsa.support32Bit = true;
-      jack.enable = true;
-    };
     printing.enable = true;
-    flatpak.enable = true;
-    gnome = {
-      gnome-keyring.enable = false;
-    };
   };
 
   programs = {
@@ -79,9 +63,6 @@ in
       gamescopeSession.enable = true;
     };
     gamemode.enable = true;
-    firefox.enable = true;
-    dconf.enable = true;
-    niri.enable = true;
     noisetorch.enable = true;
   };
 
@@ -100,5 +81,4 @@ in
 
   environment.sessionVariables.NIXOS_OZONE_WL = "1";
   system.stateVersion = "25.05";
-
 }

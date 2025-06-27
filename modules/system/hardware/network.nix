@@ -2,7 +2,7 @@
 
 {
   networking = {
-    hostName = "desktop";
+    hostName = "nixos";
     # nameservers = [ "194.242.2.9" ];
     # resolvconf.enable = false;
     networkmanager = {

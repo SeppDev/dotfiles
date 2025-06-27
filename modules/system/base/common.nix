@@ -12,6 +12,15 @@
     allowUnfree = true;
   };
 
+  programs = {
+    firefox.enable = true;
+  };
+
+  services = {
+    flatpak.enable = true;
+    printing.enable = true;
+  };
+
   security = {
     rtkit.enable = true;
     sudo.enable = false;
