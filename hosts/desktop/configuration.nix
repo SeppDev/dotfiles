@@ -7,19 +7,15 @@
 let
   systemDir = ../../modules/system;
   Module = name: systemDir + "/${name}.nix";
+  Default = name: systemDir + "/${name}/default.nix";
 in
 {
   imports = [
     /etc/nixos/hardware-configuration.nix
-    (Module "desktop/hyprland")
-    (Module "base")
-    (Module "xpadneo")
-    (Module "nvidia")
-    (Module "envpath")
-    (Module "polkit")
-    (Module "bluetooth")
-    (Module "network")
-    (Module "locale")
+    (Default "base")
+    (Default "hardware")
+    (Default "security")
+    (Default "desktop")
   ];
 
   environment.sessionVariables.HOST = "desktop";
@@ -31,11 +27,6 @@ in
       "networkmanager"
       "wheel"
     ];
-  };
-
-  nixpkgs.config = {
-    acceptLicense = true;
-    allowUnfree = true;
   };
 
   home-manager = {
@@ -59,11 +50,6 @@ in
     };
   };
 
-  hardware = {
-    enableAllFirmware = true;
-    graphics.enable = true;
-  };
-
   services = {
     libinput.enable = true;
     displayManager = {
@@ -82,7 +68,7 @@ in
     printing.enable = true;
     flatpak.enable = true;
     gnome = {
-      gnome-keyring.enable = true;
+      gnome-keyring.enable = false;
     };
   };
 

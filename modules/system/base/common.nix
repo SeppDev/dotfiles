@@ -16,7 +16,7 @@
     rtkit.enable = true;
     sudo.enable = false;
     sudo-rs.enable = true;
-    pam.services.hyprland.enableGnomeKeyring = true;
+    # pam.services.hyprland.enableGnomeKeyring = true;
   };
 
   nix = {
