@@ -76,7 +76,6 @@ in
     ffmpeg-full
     ags
     bluez
-    blueman
     pavucontrol
     kitty
     brave

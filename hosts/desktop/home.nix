@@ -21,7 +21,6 @@ in
   ];
 
   home.packages = with pkgs; [
-    quickshell
     rustup
     zoxide
     rpi-imager
