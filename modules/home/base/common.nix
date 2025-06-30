@@ -18,7 +18,8 @@
 
     gtk4
 
-    nil
+    # nil
+    nixd
     nixfmt-rfc-style
 
     home-manager
@@ -40,8 +41,9 @@
       XDG_SESSION_TYPE = "wayland";
       XCURSOR_THEME = "Adwaita";
       GDK_BACKEND = "wayland,x11";
-      QML2_IMPORT_PATH = "$HOME/.config/quickshell";
-      QT_QML_GENERATE_QMLLS_INI = "on";
+      # QML2_IMPORT_PATH = "${pkgs.quickshell}/lib/qt-6/qml:${pkgs.kdePackages.qtdeclarative}/lib/qt-6/qml";
+      QML2_IMPORT_PATH = "${pkgs.quickshell}/lib/qt-6/qml:${pkgs.qt6.qtbase}/lib/qt-6/qml";
+      # QT_QML_GENERATE_QMLLS_INI = "ON";
     };
 
     file.".config/quicskhell" = {
