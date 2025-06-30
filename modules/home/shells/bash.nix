@@ -11,6 +11,5 @@
       rebuild = "sudo nixos-rebuild switch --flake ~/dotfiles#$HOST --impure";
       rollback = "sudo nixos-rebuild switch --rollback";
     };
-
   };
 }

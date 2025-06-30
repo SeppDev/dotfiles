@@ -40,6 +40,8 @@
     # pam.services.hyprland.enableGnomeKeyring = true;
   };
 
+  environment.variables.PATH = [ "$HOME/.cargo/bin" ];
+
   nix = {
     gc = {
       automatic = true;

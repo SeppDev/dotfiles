@@ -30,8 +30,6 @@ in
   boot.initrd.luks.devices."luks-09569b80-0fb2-4ef9-99c7-52e5c1360f8e".device =
     "/dev/disk/by-uuid/09569b80-0fb2-4ef9-99c7-52e5c1360f8e";
 
-  qt.enable = true;
-
   services.power-profiles-daemon.enable = false;
   services.tlp = {
     enable = true;
@@ -42,7 +40,6 @@ in
   };
 
   home-manager = {
-    # specialArgs = { inherit inputs; };
     useGlobalPkgs = true;
     useUserPackages = true;
     users = {

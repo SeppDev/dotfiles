@@ -15,8 +15,5 @@
     quickshell
   ];
 
-  file.".config/quicskhell" = {
-    source = ../../config/quickshell;
-    recursive = true;
-  };
+
 }
