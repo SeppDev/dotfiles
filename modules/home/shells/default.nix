@@ -2,6 +2,6 @@
 {
   imports = [
     ./bash.nix
-    ./mkshell.nix
+    # ./mkshell.nix
   ];
 }

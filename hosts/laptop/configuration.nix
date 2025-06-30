@@ -13,6 +13,7 @@ in
     /etc/nixos/hardware-configuration.nix
     (Default "base")
     (Default "hardware")
+    (Default "services")
     (Default "security")
     (Default "desktop")
   ];

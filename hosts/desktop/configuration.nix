@@ -15,6 +15,7 @@ in
     (Default "base")
     (Default "hardware")
     (Default "security")
+    (Default "services")
     (Default "desktop")
     (Module "drivers/nvidia")
   ];

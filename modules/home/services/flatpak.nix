@@ -1,7 +1,7 @@
 { ... }:
 {
   services.flatpak = {
-    # enable = true;
+    enable = true;
     # remotes = [
     #   {
     #     name = "flathub";

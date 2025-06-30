@@ -2,5 +2,5 @@
 {
   imports = [
     ./flatpak.nix
-  ]
+  ];
 }
