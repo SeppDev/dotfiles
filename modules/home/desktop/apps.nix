@@ -14,5 +14,7 @@
     seahorse
     rpi-imager
     waypaper
+    
+    flatpak
   ];
 }
