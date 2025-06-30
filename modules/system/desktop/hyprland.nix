@@ -12,6 +12,7 @@
     hyprshot
     hyprcursor
     rose-pine-hyprcursor
+    xdg-desktop-portal-hyprland
   ];
 
   programs.hyprlock.enable = true;

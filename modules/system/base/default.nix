@@ -3,8 +3,8 @@
 {
   imports = [
     ./common.nix
-    ./envpath.nix
     ./locale.nix
     ./polkit.nix
+    ./user.nix
   ];
 }

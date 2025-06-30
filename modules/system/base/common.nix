@@ -4,7 +4,20 @@
   environment.systemPackages = with pkgs; [
     helix
     wget
-    wl-clipboard
+    accountsservice
+
+    libva
+    libvdpau
+    vdpauinfo
+
+    x256
+    nv-codec-headers-12
+
+    sysstat
+    lm_sensors
+    ethtool
+    pciutils
+    usbutils
   ];
 
   nixpkgs.config = {
@@ -17,7 +30,6 @@
   };
 
   services = {
-    flatpak.enable = true;
     printing.enable = true;
   };
 

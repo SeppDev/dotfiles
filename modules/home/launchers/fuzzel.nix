@@ -1,7 +1,7 @@
-{ pkgs, ...}:
+{ pkgs, ... }:
 
 {
-  home.packages = with pkgs; [fuzzel];
+  home.packages = with pkgs; [ fuzzel ];
 
   programs.fuzzel = {
     enable = true;

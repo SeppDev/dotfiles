@@ -7,6 +7,8 @@
     playerctl
   ];
 
+  boot.extraModprobeConfig = '' options bluetooth disable_ertm=1 '';
+
   hardware.bluetooth = {
     enable = true;
     powerOnBoot = true;

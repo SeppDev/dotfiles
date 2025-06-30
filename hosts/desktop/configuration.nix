@@ -21,15 +21,6 @@ in
 
   environment.sessionVariables.HOST = "desktop";
 
-  users.users.sepp = {
-    isNormalUser = true;
-    description = "sepp";
-    extraGroups = [
-      "networkmanager"
-      "wheel"
-    ];
-  };
-
   home-manager = {
     useGlobalPkgs = true;
     useUserPackages = true;

@@ -1,6 +1,36 @@
 { pkgs, ... }:
 
 {
+  home.packages = with pkgs [
+    cmake
+    ninja
+    just
+
+    clangStdenv
+    clang
+    gcc
+
+    # nodejs
+    # typescript
+    rustup
+
+    fastfetch
+    lolcat
+
+    gtk4
+
+    nil
+    nixfmt-rfc-style
+
+    home-manager
+    wl-clipboard
+    pavucontrol
+    ffmpeg-full
+    sxhkd
+  ];
+
+  environment.variables.PATH = [ "$HOME/.cargo/bin" ];
+
   home = {
     username = "sepp";
     homeDirectory = "/home/sepp";
@@ -15,10 +45,6 @@
       GDK_BACKEND = "wayland,x11";
       QML2_IMPORT_PATH = "$HOME/.config/quickshell";
       QT_QML_GENERATE_QMLLS_INI = "on";
-    };
-    file.".config/hypr" = {
-      source = ../../config/hypr;
-      recursive = true;
     };
   };
 }

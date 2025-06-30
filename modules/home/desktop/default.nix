@@ -1,8 +1,7 @@
 { ... }:
 {
   imports = [
+    ./quickshell.nix
     ./hyprland.nix
-    ./niri.nix
-    ./gnome.nix
   ];
 }

@@ -41,15 +41,6 @@ in
     };
   };
 
-  users.users.sepp = {
-    isNormalUser = true;
-    description = "sepp";
-    extraGroups = [
-      "networkmanager"
-      "wheel"
-    ];
-  };
-
   home-manager = {
     # specialArgs = { inherit inputs; };
     useGlobalPkgs = true;
@@ -61,6 +52,7 @@ in
 
   environment.systemPackages = with pkgs; [
     tlp
+    brightnessctl
   ];
 
   system.stateVersion = "25.05"; # Did you read the comment?
