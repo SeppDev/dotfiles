@@ -8,7 +8,6 @@
 
     clangStdenv
     clang
-    gcc
 
     # nodejs
     # typescript
@@ -46,12 +45,12 @@
     };
 
     file.".config/quicskhell" = {
-      source = ../../config/quickshell;
+      source = ../../../config/quickshell;
       recursive = true;
     };
 
-    file.".config/hyprland" = {
-      source = ../../config/hyprland;
+    file.".config/hypr" = {
+      source = ../../../config/hypr;
       recursive = true;
     };
   };

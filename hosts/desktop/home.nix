@@ -9,13 +9,12 @@ in
   imports = [
     (Default "base")
     (Default "desktop")
+    (Default "terminals")
     (Default "editors")
     (Default "launchers")
     (Default "shells")
     (Default "services")
   ];
-
-
 
   home.packages = with pkgs; [ ];
 

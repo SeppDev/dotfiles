@@ -10,7 +10,6 @@
     libvdpau
     vdpauinfo
 
-    x256
     nv-codec-headers-12
 
     sysstat

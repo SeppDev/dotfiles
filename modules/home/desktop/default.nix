@@ -2,6 +2,6 @@
 {
   imports = [
     ./quickshell.nix
-    ./hyprland.nix
+    ./apps.nix
   ];
 }
