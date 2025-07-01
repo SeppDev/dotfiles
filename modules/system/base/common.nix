@@ -5,6 +5,7 @@
     helix
     wget
     accountsservice
+    android-tools
 
     libva
     libvdpau

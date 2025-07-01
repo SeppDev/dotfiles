@@ -9,6 +9,10 @@
     clangStdenv
     clang
 
+    python3Full
+    pipx
+    # python313Packages.pip
+
     # nodejs
     # typescript
     rustup
