@@ -5,6 +5,8 @@
     helix
     wget
     accountsservice
+
+    android-udev-rules
     android-tools
 
     libva
@@ -20,12 +22,15 @@
     usbutils
   ];
 
+  services.udev.packages = with pkgs; [ android-udev-rules ];
+
   nixpkgs.config = {
     acceptLicense = true;
     allowUnfree = true;
   };
 
   programs = {
+    adb.enable = true;
     firefox.enable = true;
   };
 
