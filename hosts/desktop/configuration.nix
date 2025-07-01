@@ -1,5 +1,4 @@
 {
-  config,
   pkgs,
   ...
 }:
@@ -59,16 +58,11 @@ in
   };
 
   environment.systemPackages = with pkgs; [
-    bun
-    gcc
-    clang
     rnnoise
     rnnoise-plugin
     speech-denoiser
     noisetorch
     easyeffects
-    lutris
-    bottles
   ];
 
   environment.sessionVariables.NIXOS_OZONE_WL = "1";

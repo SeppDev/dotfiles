@@ -1,8 +1,8 @@
-{ pkgs, ... }:
+{ ... }:
 
 let
   homeDir = ../../modules/home;
-  Module = name: homeDir + "/${name}.nix";
+  # Module = name: homeDir + "/${name}.nix";
   Default = name: homeDir + "/${name}/default.nix";
 in
 {
@@ -16,7 +16,7 @@ in
     (Default "services")
   ];
 
-  home.packages = with pkgs; [ ];
+  # home.packages = with pkgs; [ ];
 
   home.stateVersion = "25.11";
   programs.home-manager.enable = true;
