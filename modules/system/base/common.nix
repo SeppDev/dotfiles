@@ -9,10 +9,6 @@
     android-udev-rules
     android-tools
 
-    libva
-    libvdpau
-    vdpauinfo
-
     nv-codec-headers-12
 
     sysstat

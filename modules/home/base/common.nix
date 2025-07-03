@@ -17,7 +17,18 @@
     # typescript
     rustup
 
+    ffmpeg-full
+    libGL
+    libva
+    libva-utils
+    vaapiVdpau
+    libvdpau
+    vdpauinfo
+
+    yazi
+
     fastfetch
+    xwayland
     lolcat
 
     gtk4
