@@ -15,8 +15,14 @@
         file-types = [ "qml" ];
       };
     };
+    themes = {
+      transparent = {
+        "inherits" = "carbonfox";
+        "ui.background" = { };
+      };
+    };
     settings = {
-      theme = "modus_vivendi";
+      theme = "transparent";
       editor = {
         line-number = "relative";
         mouse = true;

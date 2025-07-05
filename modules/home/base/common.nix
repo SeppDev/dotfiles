@@ -49,6 +49,7 @@
     homeDirectory = "/home/sepp";
     sessionVariables = {
       EDITOR = "zeditor";
+      TERMINAL = "bash";
       XCURSOR_SIZE = "32";
       GTK_THEME = "Adwaita-dark";
       QT_QPA_PLATFORMTHEME = "qt5ct";
