@@ -2,6 +2,7 @@
 
 {
   environment.systemPackages = with pkgs; [
+    hyprlang
     hyprland
     hyprpaper
     hyprpolkitagent
