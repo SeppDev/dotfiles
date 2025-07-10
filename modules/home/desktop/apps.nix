@@ -19,7 +19,6 @@
     qbittorrent
     brave
     discord
-    seahorse
     rpi-imager
     waypaper
   ];

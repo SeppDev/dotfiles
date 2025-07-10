@@ -3,11 +3,13 @@
 {
   environment.systemPackages = with pkgs; [
     blueman
+    kdePackages.bluedevil
     bluez
     playerctl
   ];
+  services.blueman.enable = true;
 
-  boot.extraModprobeConfig = '' options bluetooth disable_ertm=1 '';
+  boot.extraModprobeConfig = ''options bluetooth disable_ertm=1 '';
 
   hardware.bluetooth = {
     enable = true;
@@ -30,5 +32,4 @@
     serviceConfig.ExecStart = "${pkgs.bluez}/bin/mpris-proxy";
   };
 
-  services.blueman.enable = true;
 }

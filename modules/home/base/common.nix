@@ -71,5 +71,10 @@
       source = ../../../config/hypr;
       recursive = true;
     };
+
+    file.".config/home-manager" = {
+      source = ../../../config/home-manager;
+      recursive = true;
+    };
   };
 }
