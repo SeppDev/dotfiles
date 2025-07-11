@@ -9,7 +9,7 @@
     shellAliases = {
       zed = "zeditor";
       rebuild = "sudo nixos-rebuild switch --flake ~/dotfiles#$HOST --impure";
-      rebuild_update = "sudo nixos-rebuild switch --flake --update ~/dotfiles#$HOST --impure";
+      rebuild-update = "sudo nix flake update --flake ~/dotfiles && rebuild";
       rollback = "sudo nixos-rebuild switch --rollback";
     };
   };
