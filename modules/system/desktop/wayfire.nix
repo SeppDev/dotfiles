@@ -1,0 +1,4 @@
+{...}:
+{
+  programs.wayfire.enable = true;
+}
