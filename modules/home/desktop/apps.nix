@@ -17,7 +17,6 @@
     lunar-client
     spotify
     qbittorrent
-    brave
     discord
     rpi-imager
     waypaper
