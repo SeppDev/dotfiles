@@ -44,10 +44,10 @@
     sxhkd
   ];
 
+
   home = {
     username = "sepp";
     homeDirectory = "/home/sepp";
-    backupFileExtension = "backup";
     sessionVariables = {
       EDITOR = "zeditor";
       TERMINAL = "bash";

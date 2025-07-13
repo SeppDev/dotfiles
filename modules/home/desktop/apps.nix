@@ -11,7 +11,6 @@
     bottles
     flatpak
 
-    code-cursor
     speech-denoiser
     vlc
     lunar-client

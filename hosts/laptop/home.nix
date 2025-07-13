@@ -16,7 +16,7 @@ in
     (Default "services")
   ];
 
-  home.packages = with pkgs; [ ];
+  # home.packages = with pkgs; [ ];
 
   home.stateVersion = "25.11";
   programs.home-manager.enable = true;
