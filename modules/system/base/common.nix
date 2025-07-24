@@ -2,14 +2,33 @@
 
 {
   environment.systemPackages = with pkgs; [
+    cmake
+    ninja
+    just
+    buildPackages.gcc
+    buildPackages.binutils
+
+    clangStdenv
+    clang
+
+    python3Full
+    pipx
+
+    nodejs
+    rustup
+  
     helix
     wget
     accountsservice
+    bun
+    htop
+    btop
+    libavif
 
     android-udev-rules
     android-tools
 
-    nv-codec-headers-12
+    xdg-utils
 
     sysstat
     lm_sensors
@@ -23,6 +42,9 @@
   nixpkgs.config = {
     acceptLicense = true;
     allowUnfree = true;
+    permittedInsecurePackages = [
+      "ventoy-qt5-1.1.05"
+    ];
   };
 
   programs = {
@@ -31,6 +53,7 @@
   };
 
   services = {
+    dbus.enable = true;
     printing.enable = true;
   };
 
@@ -38,10 +61,10 @@
     rtkit.enable = true;
     sudo.enable = false;
     sudo-rs.enable = true;
-    # pam.services.hyprland.enableGnomeKeyring = true;
+    pam.services.plasma6.kwallet.enable = true;
   };
 
-  environment.variables.PATH = [ "$HOME/.cargo/bin" ];
+  environment.variables.PATH = [ "$HOME/.cargo/bin" "$HOME/.bun/bin" ];
 
   nix = {
     gc = {
@@ -58,6 +81,14 @@
   xdg.portal = {
     enable = true;
     wlr.enable = true;
-    extraPortals = [ pkgs.xdg-desktop-portal-hyprland ];
+    extraPortals = with pkgs; [
+      xdg-dbus-proxy
+      xdg-desktop-portal
+      xdg-desktop-portal-wlr
+      xdg-desktop-portal-gtk
+      xdg-desktop-portal-gnome
+      xdg-desktop-portal-hyprland
+      kdePackages.xdg-desktop-portal-kde
+    ];
   };
 }

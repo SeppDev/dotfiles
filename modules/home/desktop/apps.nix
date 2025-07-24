@@ -5,19 +5,26 @@
     obs-studio-plugins.obs-websocket
     obs-cmd
 
-    bun
+    qemu_full
+    gparted
 
     lutris
     bottles
     flatpak
+    mangohud
 
     speech-denoiser
+    rnnoise
+    rnnoise-plugin
+    easyeffects
     vlc
     lunar-client
-    spotify
     qbittorrent
-    discord
     rpi-imager
     waypaper
+    linux-wallpaperengine
+
+    ventoy-full-qt
   ];
+
 }

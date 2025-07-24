@@ -59,11 +59,6 @@ in
   };
 
   environment.systemPackages = with pkgs; [
-    rnnoise
-    rnnoise-plugin
-    speech-denoiser
-    noisetorch
-    easyeffects
   ];
 
   environment.sessionVariables.NIXOS_OZONE_WL = "1";

@@ -5,6 +5,7 @@
     hyprlang
     hyprland
     hyprpaper
+    mpvpaper
     hyprpolkitagent
     hypridle
     hyprlock
