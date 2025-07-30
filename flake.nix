@@ -1,7 +1,7 @@
 {
   inputs = {
-    hyprland.url = "github:hyprwm/Hyprland";
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+    hyprland.url = "github:hyprwm/Hyprland";
     ags.url = "github:Aylur/ags";
 
     home-manager = {

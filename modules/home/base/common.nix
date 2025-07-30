@@ -2,7 +2,6 @@
 
 {
   home.packages = with pkgs; [
-
     ffmpeg-full
     libGL
     libva
@@ -12,22 +11,21 @@
     vdpauinfo
 
     yazi
-
     fastfetch
     xwayland
     lolcat
-
     gtk4
 
     # nil
     nixd
     nixfmt-rfc-style
 
+    # networkmanager
+
     home-manager
     wl-clipboard
     pavucontrol
     nv-codec-headers
-    ffmpeg-full
     sxhkd
   ];
 
