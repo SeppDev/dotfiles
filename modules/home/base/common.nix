@@ -19,6 +19,7 @@
     # nil
     nixd
     nixfmt-rfc-style
+    nautilus
 
     # networkmanager
 
@@ -39,8 +40,10 @@
       GTK_THEME = "Adwaita-dark";
       QT_QPA_PLATFORMTHEME = "qt5ct";
       XDG_SESSION_TYPE = "wayland";
+      XDG_CURRENT_DESKTOP = "Hyprland";
       XCURSOR_THEME = "Adwaita";
       GDK_BACKEND = "wayland,x11";
+      QT_QPA_PLATFORM = "wayland;xcb";
       QML2_IMPORT_PATH = "${pkgs.quickshell}/lib/qt-6/qml:${pkgs.qt6.qtbase}/lib/qt-6/qml";
       # QML2_IMPORT_PATH = "${pkgs.quickshell}/lib/qt-6/qml:${pkgs.kdePackages.qtdeclarative}/lib/qt-6/qml";
       # QT_QML_GENERATE_QMLLS_INI = "ON";
