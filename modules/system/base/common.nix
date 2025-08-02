@@ -39,7 +39,7 @@
 
   services.udev.packages = with pkgs; [ android-udev-rules ];
 
-  boot.kernelPackages = pkgs.linuxKernel.packages.linux_6_15;
+  # boot.kernelPackages = pkgs.linuxKernel.packages.linux_6_15;
 
   nixpkgs.config = {
     acceptLicense = true;

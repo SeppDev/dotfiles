@@ -12,6 +12,7 @@ in
   imports = [
     /etc/nixos/hardware-configuration.nix
     (Default "base")
+    (Module "battery")
     (Default "hardware")
     (Default "services")
     (Default "security")
