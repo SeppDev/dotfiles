@@ -11,6 +11,7 @@
     lutris
     bottles
     flatpak
+    gnome-software
     # mangohud
 
     # speech-denoiser

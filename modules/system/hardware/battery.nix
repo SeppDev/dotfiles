@@ -10,43 +10,39 @@
     "acpi_osi=\"Windows 2022\""
   ];
 
-  services.upower.enable = true;
-  powerManagement.enable = true;
+  services.system76-scheduler.settings.cfsProfiles.enable = true;
 
-  services.power-profiles-daemon.enable = false;
   services.tlp = {
-    enable = false;
+    enable = true;
     settings = {
-      # CPU_SCALING_GOVERNOR_ON_AC = "performance";
-      # CPU_SCALING_GOVERNOR_ON_BAT = "powersave";
-
-      # CPU_ENERGY_PERF_POLICY_ON_BAT = "power";
-      # CPU_ENERGY_PERF_POLICY_ON_AC = "performance";
-
-      # CPU_MIN_PERF_ON_AC = 0;
-      # CPU_MAX_PERF_ON_AC = 100;
-      # CPU_MIN_PERF_ON_BAT = 0;
-      # CPU_MAX_PERF_ON_BAT = 20;
-
-      #Optional helps save long term battery health
-      # START_CHARGE_THRESH_BAT0 = 40; # 40 and below it starts to charge
-      # STOP_CHARGE_THRESH_BAT0 = 80; # 80 and above it stops charging
-
-      #ALWAYS ON BATTERY
-      TLP_DEFAULT_MODE = "BAT";
-      TLP_PERSISTENT_DEFAULT = 1;
+      CPU_BOOST_ON_AC = 1;
+      CPU_BOOST_ON_BAT = 0;
+      CPU_SCALING_GOVERNOR_ON_AC = "performance";
+      CPU_SCALING_GOVERNOR_ON_BAT = "powersave";
     };
   };
 
+  # Disable GNOMEs power management
+  services.power-profiles-daemon.enable = false;
+
+  # Enable powertop
+  powerManagement.powertop.enable = true;
+
+  # Enable thermald (only necessary if on Intel CPUs)
+  services.thermald.enable = true;
+
+  services.upower.enable = false;
+  powerManagement.enable = false;
+
   services.auto-cpufreq = {
-    enable = true;
+    enable = false;
     settings = {
       battery = {
         governor = "powersave";
         turbo = "never";
       };
       charger = {
-        governor = "powersave";
+        governor = "performance";
         turbo = "never";
       };
     };
