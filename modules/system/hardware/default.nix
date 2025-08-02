@@ -6,5 +6,6 @@
     ./network.nix
     ./xpadneo.nix
     ./common.nix
+    ./battery.nix
   ];
 }

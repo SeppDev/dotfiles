@@ -16,7 +16,7 @@
 
     nodejs
     rustup
-  
+
     helix
     wget
     accountsservice
@@ -38,6 +38,8 @@
   ];
 
   services.udev.packages = with pkgs; [ android-udev-rules ];
+
+  boot.kernelPackages = pkgs.linuxKernel.packages.linux_6_15;
 
   nixpkgs.config = {
     acceptLicense = true;
@@ -64,7 +66,10 @@
     pam.services.plasma6.kwallet.enable = true;
   };
 
-  environment.variables.PATH = [ "$HOME/.cargo/bin" "$HOME/.bun/bin" ];
+  environment.variables.PATH = [
+    "$HOME/.cargo/bin"
+    "$HOME/.bun/bin"
+  ];
 
   nix = {
     gc = {
