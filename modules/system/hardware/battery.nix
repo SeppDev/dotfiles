@@ -1,6 +1,18 @@
-{ ... }:
+{ pkgs, ... }:
 {
-  powerManagement.enable = false;
+
+  environment.systemPackages = with pkgs; [
+    # upower
+  ];
+
+  boot.kernelParams = [
+    "acpi_osi="
+    "acpi_backlight=vendor"
+  ];
+
+  services.upower.enable = true;
+  powerManagement.enable = true;
+
   services.power-profiles-daemon.enable = false;
   services.tlp = {
     enable = false;

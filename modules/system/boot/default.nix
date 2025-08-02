@@ -1,4 +1,6 @@
 { ... }:
 {
-
+  imports = [
+    ./display-manager.nix
+  ];
 }
