@@ -6,8 +6,8 @@
   ];
 
   boot.kernelParams = [
-    "acpi_osi="
-    "acpi_backlight=vendor"
+    "acpi_osi=!"
+    "acpi_osi=\"Windows 2022\""
   ];
 
   services.upower.enable = true;
