@@ -12,6 +12,7 @@
     bottles
     flatpak
     gnome-software
+    gtk4
     # mangohud
 
     # speech-denoiser
