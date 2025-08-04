@@ -7,7 +7,7 @@
     enableGeoIP = true;
     settings = {
       SOCKSPort = [ 9063 ];
-      ExitNodes = "{nl}";      
+      ExitNodes = "{nl}";
       StrictNodes = true;
       # UseBridges = true;
       # ClientTransportPlugin = "obfs4 exec ${pkgs.obfs4}/bin/lyrebird";
@@ -20,24 +20,27 @@
 
   networking = {
     hostName = "nixos";
-    # nameservers = [ "194.242.2.9" ];
-    # resolvconf.enable = false;
+    nameservers = [
+      "1.1.1.1"
+      "1.0.0.1"
+    ];
+    resolvconf.enable = true;
     networkmanager = {
       enable = true;
-      # dns = "none";
+      dns = "none";
     };
   };
 
   services.resolved = {
-    enable = true;
-    dnsovertls = "true";
-    dnssec = "false";
-    llmnr = "true";
-    domains = [
-      "~"
-    ];
-    extraConfig = ''
-      DNS=194.242.2.6#family.dns.mullvad.net
-    '';
+    enable = false;
+    # dnsovertls = "true";
+    # dnssec = "false";
+    # llmnr = "true";
+    # domains = [
+    # "~"
+    # ];
+    # extraConfig = ''
+    # DNS=194.242.2.6#family.dns.mullvad.net
+    # '';
   };
 }

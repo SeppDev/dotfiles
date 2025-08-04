@@ -39,6 +39,12 @@
             ./hosts/laptop/configuration.nix
           ];
         };
+        raspberry = nixpkgs.lib.nixosSystem {
+          modules = [
+            inputs.home-manager.nixosModules.default
+            ./hosts/raspberry/configuration.nix
+          ];
+        };
       };
     };
 }
