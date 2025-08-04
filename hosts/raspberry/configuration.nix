@@ -14,6 +14,8 @@ in
     (Module "base/user")
     (Module "base/locale")
     (Module "services/monero")
+    (Module "services/ssh")
+    (Default "security")
   ];
 
   environment.sessionVariables.HOST = "raspberry";
