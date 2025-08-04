@@ -1,5 +1,4 @@
 {
-  pkgs,
   ...
 }:
 
@@ -13,7 +12,7 @@ in
     /etc/nixos/hardware-configuration.nix
     (Module "base/user")
     (Module "base/locale")
-    (Module "services/monero")
+    (Module "services/xmrig")
     (Module "services/ssh")
     (Default "security")
   ];
