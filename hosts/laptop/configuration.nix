@@ -14,6 +14,7 @@ in
     (Default "base")
     (Module "battery")
     (Default "hardware")
+    (Default "boot")
     (Default "services")
     (Default "security")
     (Default "desktop")

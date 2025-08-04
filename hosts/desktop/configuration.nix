@@ -13,10 +13,12 @@ in
     /etc/nixos/hardware-configuration.nix
     (Default "base")
     (Default "hardware")
+    (Default "boot")
     (Default "security")
     (Default "services")
     (Default "desktop")
     (Module "drivers/nvidia")
+    (Module "services/monero")
   ];
 
   environment.sessionVariables.HOST = "desktop";
@@ -31,6 +33,7 @@ in
   };
 
   powerManagement.enable = true;
+
 
   boot.kernelPackages = pkgs.linuxPackages_6_6;
 

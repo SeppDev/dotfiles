@@ -2,6 +2,7 @@
 {
   qt.enable = true;
 
+
   home.packages = with pkgs; [
     qt6.full
     qt6.qtdeclarative

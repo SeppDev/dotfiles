@@ -25,9 +25,12 @@
     # qbittorrent
     # rpi-imager
     waypaper
+    # monero-gui
     # linux-wallpaperengine
 
     # ventoy-full-qt
   ];
+
+  qt.enable = true;
 
 }

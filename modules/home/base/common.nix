@@ -14,7 +14,6 @@
     fastfetch
     xwayland
     lolcat
-    gtk4
 
     # nil
     nixd

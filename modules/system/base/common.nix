@@ -35,6 +35,7 @@
     ethtool
     pciutils
     usbutils
+    # monero-cli
   ];
 
   services.udev.packages = with pkgs; [ android-udev-rules ];
@@ -60,18 +61,6 @@
 
   };
 
-  services.tor = {
-    enable = true;
-    relay.enable = false;
-    openFirewall = true;
-    settings = {
-      SOCKSPort = [ 9063 ];
-      # UseBridges = true;
-      # ClientTransportPlugin = "obfs4 exec ${pkgs.obfs4}/bin/lyrebird";
-      # Bridge = "obfs4 IP:ORPort [fingerprint]";
-    };
-    client.enable = true;
-  };
 
   security = {
     rtkit.enable = true;

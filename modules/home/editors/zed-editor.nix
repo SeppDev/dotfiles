@@ -23,6 +23,13 @@
             };
           };
         };
+        QML = {
+          formatter = {
+            external = {
+              command = "qmlformat";  
+            };
+          };
+        };
       };
       vim_mode = false;
       buffer_font_size = 16;

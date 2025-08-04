@@ -10,10 +10,14 @@
         auto-format = true;
         formatter.command = "nixfmt";
       };
-      qml = {
-        language-servers = [ "qmlls" ];
-        file-types = [ "qml" ];
+      language-server.qmlls = {
+        args = ["-E"];
+        command = "qmlls";
       };
+      # qml = {
+        # language-servers = [ "qmlls" ];
+        # file-types = [ "qml" ];
+      # };
     };
     themes = {
       transparent = {
