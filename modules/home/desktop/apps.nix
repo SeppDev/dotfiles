@@ -5,31 +5,24 @@
     obs-studio-plugins.obs-websocket
     obs-cmd
 
-    # qemu_full
-    # gparted
-
     lutris
     bottles
     flatpak
     gnome-software
     gtk4
-    tor-browser
-    # mangohud
-
-    # speech-denoiser
-    # rnnoise
-    # rnnoise-plugin
+    librewolf
     easyeffects
     vlc
     lunar-client
     audacity
+    waypaper
+    ventoy-full-qt
+    # qemu_full
+    # gparted
+    # mangohud
+    # linux-wallpaperengine
     # qbittorrent
     # rpi-imager
-    waypaper
-    # monero-gui
-    # linux-wallpaperengine
-
-    ventoy-full-qt
   ];
 
   qt.enable = true;

@@ -11,10 +11,6 @@
     clangStdenv
     clang
 
-    python3Full
-    pipx
-
-    nodejs
     rustup
 
     helix
@@ -35,7 +31,6 @@
     ethtool
     pciutils
     usbutils
-    # monero-cli
   ];
 
   services.udev.packages = with pkgs; [ android-udev-rules ];

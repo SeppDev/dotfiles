@@ -1,8 +1,8 @@
-{ pkgs, ... }:
+{ ... }:
 
 let
   homeDir = ../../modules/home;
-  Module = name: homeDir + "/${name}.nix";
+  # Module = name: homeDir + "/${name}.nix";
   Default = name: homeDir + "/${name}/default.nix";
 in
 {

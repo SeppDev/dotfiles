@@ -46,11 +46,6 @@ in
     };
   };
 
-  services = {
-    libinput.enable = true;
-    printing.enable = true;
-  };
-
   programs = {
     nix-ld.enable = true;
     steam = {
@@ -58,11 +53,9 @@ in
       gamescopeSession.enable = true;
     };
     gamemode.enable = true;
-    noisetorch.enable = true;
   };
 
-  environment.systemPackages = with pkgs; [
-  ];
+  # environment.systemPackages = with pkgs; [];
 
   environment.sessionVariables.NIXOS_OZONE_WL = "1";
   system.stateVersion = "25.05";

@@ -29,7 +29,10 @@
     sxhkd
   ];
 
-  # environment.variables.BROWSER = "firefox";
+  services = {
+    libinput.enable = true;
+    printing.enable = true;
+  };
 
   home = {
     username = "sepp";
