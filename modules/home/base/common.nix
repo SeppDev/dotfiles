@@ -29,11 +29,6 @@
     sxhkd
   ];
 
-  services = {
-    libinput.enable = true;
-    printing.enable = true;
-  };
-
   home = {
     username = "sepp";
     homeDirectory = "/home/sepp";
