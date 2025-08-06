@@ -13,6 +13,7 @@
     flatpak
     gnome-software
     gtk4
+    tor-browser
     # mangohud
 
     # speech-denoiser
@@ -28,7 +29,7 @@
     # monero-gui
     # linux-wallpaperengine
 
-    # ventoy-full-qt
+    ventoy-full-qt
   ];
 
   qt.enable = true;

@@ -29,6 +29,8 @@
     sxhkd
   ];
 
+  # environment.variables.BROWSER = "firefox";
+
   home = {
     username = "sepp";
     homeDirectory = "/home/sepp";
