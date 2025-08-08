@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, lib, ... }:
 
 {
   home.packages = with pkgs; [
@@ -26,12 +26,11 @@
     wl-clipboard
     pavucontrol
     nv-codec-headers
-    sxhkd
   ];
 
   home = {
-    username = "sepp";
-    homeDirectory = "/home/sepp";
+    username = lib.mkForce "user";
+    homeDirectory = lib.mkForce "/home/user";
     sessionVariables = {
       EDITOR = "zeditor";
       TERMINAL = "bash";

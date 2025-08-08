@@ -10,9 +10,7 @@
 
     clangStdenv
     clang
-
     rustup
-
     helix
     wget
     accountsservice
@@ -21,6 +19,7 @@
     btop
     libavif
 
+    # android-android-studio
     android-udev-rules
     android-tools
 
@@ -55,7 +54,6 @@
     printing.enable = true;
 
   };
-
 
   security = {
     rtkit.enable = true;

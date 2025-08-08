@@ -1,12 +1,17 @@
 { ... }:
 {
-  users.users.sepp = {
+
+
+  users.users.user = {
     isNormalUser = true;
-    description = "sepp";
+    description = "user";
+    group = "user";
     extraGroups = [
       "networkmanager"
       "wheel"
       "adbusers"
     ];
   };
+
+  users.groups.user = { };
 }

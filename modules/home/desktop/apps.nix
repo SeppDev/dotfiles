@@ -5,7 +5,6 @@
     obs-studio-plugins.obs-websocket
     obs-cmd
 
-    lutris
     bottles
     flatpak
     gnome-software
@@ -13,10 +12,11 @@
     librewolf
     easyeffects
     vlc
-    lunar-client
     audacity
     waypaper
-    ventoy-full-qt
+    # lunar-client
+    # ventoy-full-qt
+    # lutris
     # qemu_full
     # gparted
     # mangohud

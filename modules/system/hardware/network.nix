@@ -6,6 +6,7 @@
     openFirewall = true;
     enableGeoIP = true;
     settings = {
+      # UseBridges = true;
       SOCKSPort = [ 9063 ];
       ExitNodes = "{nl}";
       StrictNodes = true;
