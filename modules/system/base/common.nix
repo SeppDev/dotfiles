@@ -52,7 +52,7 @@
   services = {
     dbus.enable = true;
     printing.enable = true;
-
+    accounts-daemon.enable = true;
   };
 
   security = {
