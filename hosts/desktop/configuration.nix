@@ -36,7 +36,6 @@ in
   boot.kernelPackages = pkgs.linuxPackages_6_6;
 
   # Bootloader.
-  boot.initrd.luks.devices."luks-852f4629-c835-45e8-ba9b-7d6906f3597d".device = "/dev/disk/by-uuid/852f4629-c835-45e8-ba9b-7d6906f3597d";
   boot = {
     loader = {
       systemd-boot.enable = true;

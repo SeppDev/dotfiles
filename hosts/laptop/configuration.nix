@@ -30,15 +30,12 @@ in
     };
   };
 
-  boot.initrd.luks.devices."luks-09569b80-0fb2-4ef9-99c7-52e5c1360f8e".device =
-    "/dev/disk/by-uuid/09569b80-0fb2-4ef9-99c7-52e5c1360f8e";
-
   home-manager = {
     useGlobalPkgs = true;
     useUserPackages = true;
     backupFileExtension = "backup";
     users = {
-      "sepp" = import ./home.nix;
+      "user" = import ./home.nix;
     };
   };
 
