@@ -31,8 +31,6 @@ in
     };
   };
 
-  powerManagement.enable = true;
-
   boot.kernelPackages = pkgs.linuxPackages_6_6;
 
   # Bootloader.

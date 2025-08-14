@@ -14,5 +14,6 @@
       rebuild-update = "sudo nix flake update --flake ~/dotfiles && rebuild";
       rollback = "sudo nixos-rebuild switch --rollback";
     };
+    bashrcExtra = "fastfetch";
   };
 }

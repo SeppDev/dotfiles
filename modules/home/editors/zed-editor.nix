@@ -23,10 +23,10 @@
             };
           };
         };
-        QML = {
+        qml = {
           formatter = {
             external = {
-              command = "qmlformat";  
+              command = "qmlformat";
             };
           };
         };
@@ -49,7 +49,7 @@
       icon_theme = "Material Icon Theme";
       theme = {
         mode = "dark";
-        dark = "Catppuccin Espresso (Blur)";
+        dark = "Fleet Dark";
       };
       inlay-hints = {
         enabled = true;

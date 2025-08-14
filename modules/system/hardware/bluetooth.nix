@@ -3,11 +3,11 @@
 {
   environment.systemPackages = with pkgs; [
     blueman
-    kdePackages.bluedevil
     bluez
     playerctl
   ];
   services.blueman.enable = true;
+  # hardware.pulseaudio.enable = true;
 
   boot.extraModprobeConfig = ''options bluetooth disable_ertm=1 '';
 
@@ -17,7 +17,12 @@
     settings = {
       General = {
         Enable = "Source,Sink,Media,Socket";
+        ControllerMode = "bredr";
         Experimental = true;
+        FastConnectable = true;
+      };
+      Policy = {
+        AutoEnable = true;
       };
     };
   };

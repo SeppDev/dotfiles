@@ -8,23 +8,22 @@
     bottles
     flatpak
     gnome-software
-    gtk4
     librewolf
     easyeffects
     vlc
     audacity
     waypaper
+    networkmanager
+    protonvpn-gui
+    kdePackages.dolphin
     # lunar-client
     # ventoy-full-qt
     # lutris
     # qemu_full
     # gparted
-    # mangohud
+    mangohud
     # linux-wallpaperengine
     # qbittorrent
     # rpi-imager
   ];
-
-  qt.enable = true;
-
 }
