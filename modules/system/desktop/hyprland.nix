@@ -17,6 +17,7 @@
     xdg-desktop-portal-hyprland
   ];
 
+
   programs.hyprlock.enable = true;
   services.hypridle.enable = true;
 

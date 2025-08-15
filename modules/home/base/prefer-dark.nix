@@ -1,4 +1,4 @@
-{ pkgs, ...}:
+{ pkgs, ... }:
 
 {
   dconf.settings = {
@@ -7,16 +7,11 @@
     };
   };
 
-  gtk = {
-    enable = false;
-    theme = {
-      name = "Adwaita-dark";
-      package = pkgs.gnome-themes-extra;
-    };
+  gtk.theme = {
+    name = "Adwaita-dark";
+    package = pkgs.gnome-themes-extra;
   };
 
-  qt = {
-    enable = true;
-    platformTheme.name = "qt5ct";
-  };
+  qt.platformTheme.name = "qt5ct";
+
 }

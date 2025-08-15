@@ -33,7 +33,12 @@ in
 
   boot.kernelPackages = pkgs.linuxPackages_6_6;
 
-  # Bootloader.
+  systemd = {
+    services.systemd-udev-settle.enable = false;
+    network.wait-online.enable = false;
+  };
+
+  # Bootloader
   boot = {
     loader = {
       systemd-boot.enable = true;

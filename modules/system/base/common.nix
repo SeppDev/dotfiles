@@ -18,6 +18,7 @@
     htop
     btop
     libavif
+    gparted
 
     # android-android-studio
     android-udev-rules

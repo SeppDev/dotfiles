@@ -23,10 +23,12 @@
             };
           };
         };
-        qml = {
+        QML = {
+          format_on_save = "off";
           formatter = {
             external = {
               command = "qmlformat";
+              arguments = ["{buffer_path}"];
             };
           };
         };
@@ -50,8 +52,9 @@
       theme = {
         mode = "dark";
         dark = "Fleet Dark";
+        light = "Fleet Light";
       };
-      inlay-hints = {
+      inlay_hints = {
         enabled = true;
         show_type_hints = true;
         show_parameter_hints = true;
@@ -70,13 +73,13 @@
       };
       diagnostics = {
         include_warnings = true;
-        inline = {
-          enabled = true;
-          update_debounce_ms = 150;
-          padding = 4;
-          min_column = 0;
-          max_severity = null;
-        };
+        # inline = {
+        #   enabled = true;
+        #   update_debounce_ms = 150;
+        #   padding = 4;
+        #   min_column = 0;
+        #   max_severity = null;
+        # };
       };
     };
 
