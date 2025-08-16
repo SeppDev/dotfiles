@@ -8,6 +8,8 @@
     qt6.qtlanguageserver
     qt6.qttools
     qt6.qtbase
+    qt5.full
+    libsForQt5.qtgraphicaleffects
     quickshell
   ];
 }
