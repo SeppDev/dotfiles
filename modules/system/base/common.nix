@@ -48,6 +48,7 @@
   programs = {
     adb.enable = true;
     firefox.enable = true;
+    dconf.enable = true;
   };
 
   services = {

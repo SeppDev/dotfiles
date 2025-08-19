@@ -12,7 +12,6 @@
 
     yazi
     fastfetch
-    xwayland
     lolcat
 
     # nil
@@ -34,8 +33,8 @@
     sessionVariables = {
       EDITOR = "zeditor";
       TERMINAL = "bash";
+      GSK_RENDERER = "ngl";
       XCURSOR_SIZE = "32";
-      GTK_THEME = "Adwaita-dark";
       QT_QPA_PLATFORMTHEME = "qt5ct";
       XDG_SESSION_TYPE = "wayland";
       XDG_CURRENT_DESKTOP = "Hyprland";

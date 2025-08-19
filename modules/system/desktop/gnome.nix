@@ -8,9 +8,9 @@
 
   services = {
     gnome = {
-      gnome-keyring.enable = false;
+      gnome-keyring.enable = true;
     };
-    displayManager.gdm.enable = true;
+    displayManager.gdm.enable = false;
     desktopManager.gnome.enable = true;
   };
 

@@ -4,6 +4,7 @@
     obs-studio
     obs-studio-plugins.obs-websocket
     obs-cmd
+    xwayland
 
     bottles
     flatpak
@@ -15,7 +16,9 @@
     waypaper
     networkmanager
     protonvpn-gui
+    loupe
     kdePackages.dolphin
+    qbittorrent
     # lunar-client
     # ventoy-full-qt
     # lutris
