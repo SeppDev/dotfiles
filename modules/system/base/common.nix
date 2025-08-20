@@ -7,6 +7,7 @@
     just
     buildPackages.gcc
     buildPackages.binutils
+    vulkan-tools
 
     clangStdenv
     clang
