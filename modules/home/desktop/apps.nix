@@ -6,6 +6,8 @@
     obs-cmd
     xwayland
 
+    android-studio
+
     bottles
     flatpak
     gnome-software
@@ -15,7 +17,7 @@
     audacity
     waypaper
     networkmanager
-    protonvpn-gui
+    # protonvpn-gui
     loupe
     kdePackages.dolphin
     qbittorrent

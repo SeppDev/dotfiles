@@ -21,7 +21,6 @@
     libavif
     gparted
 
-    # android-android-studio
     android-udev-rules
     android-tools
 
